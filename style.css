@@ -1,0 +1,275 @@
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* ================= BODY ================= */
+
+body {
+    background: linear-gradient(
+        135deg,
+        #bfc5c7,
+        #6a91b8,
+        #7a7a7a
+    );
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* ================= MAIN CONTAINER ================= */
+
+.auth-container {
+    background: #070e0f;
+
+    width: 400px;
+    min-height: 450px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.3);
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 40px 30px;
+}
+
+
+/* ================= FORM BOX ================= */
+
+.form-box {
+    position: absolute;
+
+    top: 40px;
+    left: 30px;
+    right: 30px;
+
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* ================= SLIDE ANIMATION ================= */
+
+@keyframes slideIn {
+
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* ================= ACTIVE FORM ================= */
+
+.form-box.active {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+    pointer-events: all;
+
+    animation: slideIn 0.5s forwards;
+}
+
+
+/* ================= HIDDEN FORM ================= */
+
+.form-box.hidden {
+
+    opacity: 0;
+
+    transform: translateX(-50px);
+
+    pointer-events: none;
+}
+
+
+/* ================= HEADING ================= */
+
+h2 {
+
+    color: #d6c8c8;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    font-weight: 600;
+}
+
+
+/* ================= INPUT GROUP ================= */
+
+.input-group {
+
+    position: relative;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= INPUT ================= */
+
+.input-group input {
+
+    width: 100%;
+
+    padding: 10px 0;
+
+    font-size: 16px;
+
+    color: #cac5c5;
+
+    border: none;
+
+    border-bottom: 2px solid #ddd;
+
+    outline: none;
+
+    background: transparent;
+
+    transition: border-color 0.3s;
+}
+
+
+/* ================= LABEL ================= */
+
+.input-group label {
+
+    position: absolute;
+
+    top: 10px;
+    left: 0;
+
+    font-size: 16px;
+
+    color: #999;
+
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+}
+
+
+/* ================= FLOATING LABEL ================= */
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+
+    top: -12px;
+
+    font-size: 12px;
+
+    color: #203a43;
+
+    font-weight: bold;
+}
+
+
+/* ================= INPUT FOCUS ================= */
+
+.input-group input:focus {
+
+    border-bottom: 2px solid #203a43;
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn {
+
+    width: 100%;
+
+    background: #203a43;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 12px;
+
+    font-size: 16px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.1s ease;
+
+    margin-top: 10px;
+}
+
+
+/* ================= BUTTON HOVER ================= */
+
+.btn:hover {
+
+    background: #0f2027;
+}
+
+
+/* ================= BUTTON CLICK ================= */
+
+.btn:active {
+
+    transform: scale(0.98);
+}
+
+
+/* ================= TOGGLE TEXT ================= */
+
+.toggle-text {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    color: #666;
+}
+
+
+/* ================= TOGGLE LINK ================= */
+
+.toggle-text span {
+
+    color: #326c81;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: color 0.3s;
+}
+
+
+.toggle-text span:hover {
+
+    color: #c3d2d8;
+
+    text-decoration: underline;
+}
